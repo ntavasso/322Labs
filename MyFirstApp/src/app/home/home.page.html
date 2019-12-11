@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-button 
+    expand="block"
+    routerLink="/about/"
+    routerDirection="forward">
+      About
+  </ion-button>
+  <ion-button 
+  expand="block"
+  routerLink="/contact/"
+  routerDirection="root">Contact
+</ion-button>
+    <ion-list *ngFor="let item of listArray">
+      <ion-item>
+        {{ item.title }}
+      </ion-item>
+    </ion-list>
+
+
+    <ion-fab (click)="addItem()" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+</ion-content>
